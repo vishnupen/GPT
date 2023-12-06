@@ -63,7 +63,7 @@ DB = Chroma(
 RETRIEVER = DB.as_retriever()
 
 LLM = load_model(device_type=DEVICE_TYPE, model_id=MODEL_ID, model_basename=MODEL_BASENAME)
-prompt, memory = get_prompt_template(promptTemplate_type="llama", history=False)
+prompt, memory = get_prompt_template(promptTemplate_type="mistral", history=False)
 
 QA = RetrievalQA.from_chain_type(
     llm=LLM,
@@ -136,7 +136,7 @@ def run_ingest_route():
             client_settings=CHROMA_SETTINGS,
         )
         RETRIEVER = DB.as_retriever()
-        prompt, memory = get_prompt_template(promptTemplate_type="llama", history=False)
+        prompt, memory = get_prompt_template(promptTemplate_type="mistral", history=False)
 
         QA = RetrievalQA.from_chain_type(
             llm=LLM,
