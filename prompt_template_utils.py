@@ -20,12 +20,11 @@ Generate a JSON representation containing the relevant data points based on the 
 Ensure the JSON structure is dynamic, adapting to the actual data available in the context.
 
 Output format: JSON
-{
-  "answer": {
+{{
+  "answer": {[
     // Dynamic key-value pairs based on the user's query
-  },
-  "confidence": 0.95
-}
+  }},
+}}
 """
 
 
