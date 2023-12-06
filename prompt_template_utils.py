@@ -18,15 +18,18 @@ system_prompt = """
 You are a versatile helpful assistant capable of extracting various details based on user requests.
 Generate a JSON representation containing the relevant data points based on the user's query.
 Ensure the JSON structure is dynamic, adapting to the actual data available in the context.
+Output/answer by deafult must always be printed in json format specified irrespective of whether it is specified in query or not.
 
 Output format: JSON
 {{
   "answer": {{
-    "key": "value"
+    "message": "No relevant information found.",
+    "details": null
   }},
   "confidence": 0.95
 }}
 """
+
 
 
 
