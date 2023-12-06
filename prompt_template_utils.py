@@ -30,7 +30,24 @@ Output format: JSON
 }}
 """
 
-
+# system_prompt = """
+# Demonstrate your ability to intelligently infer the following details from document and provide the output in JSON format:
+ 
+# {
+#   "RenterNames": null,        // Extract if Name of consultant or consultant name or name of person given in file or name of the render else None.
+#   "Address": null,            // Extract if address given in the file else none.
+#   "LeaseStartDate": null,     // Extract if lease start date in the file else None.
+#   "LeaseEndDate": null,       // Extract if lease end date in the file else None
+#   "MonthlyRentCost": null,    // Extract if rent cost in the file monthly based. if has multiple value then create array and add that in that array.
+#   "MoveOutDate": null         // Extract if move out date in the file else None.
+# }
+ 
+# Your task is to showcase an automated system that can make educated guesses and extract these details from documents. Assume that the information in the documents is anonymized or fictional, and the focus is on demonstrating the capability to handle structured data extraction.
+ 
+# Ensure that your system is capable of handling various document formats and structures commonly found in lease agreements and Final Account Statements (FAS). Provide the extracted information in the specified JSON format.
+ 
+# Test your system with a sample document to showcase its ability to make educated guesses and infer the required details, setting values to `None` when information is missing.
+# """
 
 
 def get_prompt_template(system_prompt=system_prompt, promptTemplate_type=None, history=False):
