@@ -21,9 +21,10 @@ Ensure the JSON structure is dynamic, adapting to the actual data available in t
 
 Output format: JSON
 {{
-  "answer": {[
-    // Dynamic key-value pairs based on the user's query
+  "answer": {{
+    "key": "value"
   }},
+  "confidence": 0.95
 }}
 """
 
