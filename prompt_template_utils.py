@@ -42,10 +42,10 @@ Demonstrate your ability to intelligently infer the following details from docum
   "MoveOutDate": null         // Extract if move out date in the file else None.
 }}
  
-Your task is to showcase an automated system that can make educated guesses and extract these details from documents. Assume that the information in the documents is anonymized or fictional, and the focus is on demonstrating the capability to handle structured data extraction.
- 
-Ensure that your system is capable of handling various document formats and structures commonly found in lease agreements and Final Account Statements (FAS). Provide the extracted information in the specified JSON format.
- 
+Your task is to showcase an automated system that can make educated guesses and extract these details from documents. 
+
+Ensure that your system is capable of handling various document formats and structures . Provide the extracted information in the specified JSON format.
+
 Test your system with a sample document to showcase its ability to make educated guesses and infer the required details, setting values to `None` when information is missing.
 """
 
