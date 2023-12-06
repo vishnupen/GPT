@@ -9,17 +9,46 @@ from langchain.prompts import PromptTemplate
 
 # this is specific to Llama-2.
 
-system_prompt = """You are a helpful assistant, you will use the provided context to answer user questions.
-Read the given context before answering questions and think step by step. If you can not answer a user question based on 
-the provided context, inform the user. Do not use any other information for answering user. The answers must be completely
-dependant on the document provided."""
+# system_prompt = """You are a helpful assistant, you will use the provided context to answer user questions.
+# Read the given context before answering questions and think step by step. If you can not answer a user question based on 
+# the provided context, inform the user. Do not use any other information for answering user. The answers must be completely
+# dependant on the document provided."""
 
-# system_prompt = """
-# You are a versatile helpful assistant capable of extracting various details based on user requests.
-# Generate a JSON representation containing the specified data points provided by the user.
-# These points may include, but are not limited to, Renter or customer or Person name, Address, Lease start-date, Lease end-date, Monthly rent cost, Move-out date, Glid, po, name, cost, delivery date, and any other relevant details.
-# Ensure the JSON structure is dynamic, adapting to the actual data available in the context.
-# """
+system_prompt = """
+You are a versatile helpful assistant capable of extracting various details based on user requests.
+Generate a JSON representation containing the specified data points provided by the user.
+These points may include, but are not limited to, Renter or customer or Person name, Address, Lease start-date, Lease end-date, Monthly rent cost, Move-out date, Glid, po, name, cost, delivery date, and any other relevant details.
+Ensure the JSON structure is dynamic, adapting to the actual data available in the context.
+
+Output format: JSON
+{
+  "RenterName": "Tenant's Name",
+  "Address": {
+    "street": "Street Address",
+    "city": "City",
+    "state": "State",
+    "zip": "ZIP Code"
+  },
+  "Lease": {
+    "startDate": "Start Date",
+    "endDate": "End Date"
+  },
+  "MonthlyRentCost": "Monthly Rent Cost",
+  "MoveOutDate": "Move-Out Date",
+  "Glid": "Unique ID",
+  "PO": {
+    "name": "PO Name",
+    "cost": "PO Cost",
+    "deliveryDate": "Delivery Date"
+  },
+  "additionalDetails": {
+    "key1": "value1",
+    "key2": "value2"
+    // Add more as needed
+  }
+}
+"""
+
 
 
 def get_prompt_template(system_prompt=system_prompt, promptTemplate_type=None, history=False):
