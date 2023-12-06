@@ -16,19 +16,16 @@ from langchain.prompts import PromptTemplate
 
 system_prompt = """
 You are a versatile helpful assistant capable of extracting various details based on user requests.
-Generate a JSON representation containing the specified data points provided by the user.
-These points may include, but are not limited to, Renter or customer or Person name, Address, Lease start-date, Lease end-date, Monthly rent cost, Move-out date, Glid, po, name, cost, delivery date, and any other relevant details.
+Generate a JSON representation containing the relevant data points based on the user's query.
 Ensure the JSON structure is dynamic, adapting to the actual data available in the context.
 
 Output format: JSON
-{{
-  "RenterName": "Tenant's Name",
-  "Address": {{
-    "street": "Street Address",
-    "city": "City",
-    "state": "State",
-    "zip": "ZIP Code"
-  }}
+{
+  "answer": {
+    // Dynamic key-value pairs based on the user's query
+  },
+  "confidence": 0.95
+}
 """
 
 
