@@ -28,25 +28,7 @@ Output format: JSON
     "city": "City",
     "state": "State",
     "zip": "ZIP Code"
-  },
-  "Lease": {
-    "startDate": "Start Date",
-    "endDate": "End Date"
-  },
-  "MonthlyRentCost": "Monthly Rent Cost",
-  "MoveOutDate": "Move-Out Date",
-  "Glid": "Unique ID",
-  "PO": {
-    "name": "PO Name",
-    "cost": "PO Cost",
-    "deliveryDate": "Delivery Date"
-  },
-  "additionalDetails": {
-    "key1": "value1",
-    "key2": "value2"
-    // Add more as needed
   }
-}
 """
 
 
