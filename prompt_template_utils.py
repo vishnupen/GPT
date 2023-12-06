@@ -21,14 +21,14 @@ These points may include, but are not limited to, Renter or customer or Person n
 Ensure the JSON structure is dynamic, adapting to the actual data available in the context.
 
 Output format: JSON
-{
+{{
   "RenterName": "Tenant's Name",
-  "Address": {
+  "Address": {{
     "street": "Street Address",
     "city": "City",
     "state": "State",
     "zip": "ZIP Code"
-  }
+  }}
 """
 
 
